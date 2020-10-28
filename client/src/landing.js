@@ -71,7 +71,8 @@ function App() {
   // establish socket connection
   useEffect(() => {
     // setSocket(io(`http://localhost:${port}`));
-    setSocket(io('ws://infinite-retreat-69006.herokuapp.com'));
+    // setSocket(io('ws://infinite-retreat-69006.herokuapp.com'));
+    setSocket(io('ws://jooom.herokuapp.com'));
 
     $('#joinId').val(params.id);
     setId(params.id);

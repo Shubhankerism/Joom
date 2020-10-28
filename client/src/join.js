@@ -25,7 +25,7 @@ import Badge from '@material-ui/core/Badge';
 import './App.css';
 
 
-const drawerWidth = 375;
+const drawerWidth = 378;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -137,7 +137,8 @@ function App() {
     const port = process.env.PORT || 4000;
     useEffect(() => {
         // setSocket(io(`http://localhost:${port}`));
-        setSocket(io('ws://infinite-retreat-69006.herokuapp.com'));
+        // setSocket(io('ws://infinite-retreat-69006.herokuapp.com'));
+        setSocket(io('ws://jooom.herokuapp.com'));
         // setSocket(io('http://localhost:4000'));
         setRoomId(id);
 
