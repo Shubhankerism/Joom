@@ -70,7 +70,8 @@ function App() {
   const port = process.env.PORT || 4000;
   // establish socket connection
   useEffect(() => {
-    setSocket(io(`http://localhost:${port}`));
+    // setSocket(io(`http://localhost:${port}`));
+    setSocket(io('ws://infinite-retreat-69006.herokuapp.com'));
 
     $('#joinId').val(params.id);
     setId(params.id);

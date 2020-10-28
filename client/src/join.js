@@ -136,8 +136,8 @@ function App() {
     // const [socketConnected, setSocketConnected] = useState(false);
     const port = process.env.PORT || 4000;
     useEffect(() => {
-        setSocket(io(`http://localhost:${port}`));
-
+        // setSocket(io(`http://localhost:${port}`));
+        setSocket(io('ws://infinite-retreat-69006.herokuapp.com'));
         // setSocket(io('http://localhost:4000'));
         setRoomId(id);
 
