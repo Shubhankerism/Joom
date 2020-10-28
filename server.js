@@ -4,6 +4,7 @@ const socketIO = require('socket.io')
 const cors = require('cors')
 const { v4: uuidV4 } = require('uuid')
 const { ExpressPeerServer } = require('peer');
+const path = require('path');
 
 // our localhost port
 const port = (process.env.PORT || 4000)
@@ -22,6 +23,15 @@ const peerServer = ExpressPeerServer(server, {
 const io = socketIO(server)
 
 app.use('/peerjs', peerServer);
+
+if (process.env.NODE_ENV === 'production') {
+  // Set static folder
+  app.use(express.static('client/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 // This is what the socket.io syntax is like, we will work this later
 io.on('connect', socket => {
   // console.log('New client connected')
