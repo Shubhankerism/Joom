@@ -160,7 +160,8 @@ function App() {
 
     <div className={classes.root}>
       <CssBaseline />
-      <br /><br />
+      <br />
+      {/* <br /> */}
       <Fade in={true} timeout={{ enter: 0 }}>
         <Grid container>
 
@@ -185,7 +186,8 @@ function App() {
                 ...video calling app
               </Typography>
             </Grid>
-            <br /> <br />
+            {/* <br /> */}
+            {/* <br /> */}
             <Grid item md={8}>
 
               <Card className={classes.cardbg}>
@@ -195,7 +197,8 @@ function App() {
 
                     ENTER YOUR <span style={{ color: "#ff796e" }} >NAME</span>
                   </Typography>
-                  <TextField id="standard-basic" label="Your Name" onChange={onChangeName} /> <br /> <br />
+                  <TextField id="standard-basic" label="Your Name" onChange={onChangeName} /> <br />
+                  {/* <br /> */}
                   <hr />
                   <Typography gutterBottom variant="h5" component="h2" style={{ fontFamily: "raleway", color: "#ff796e" }} >
 
@@ -203,7 +206,8 @@ function App() {
                   </Typography>
 
                   <form noValidate autoComplete="off">
-                    <TextField id="joinId" label="Meeting Code" onChange={onChange} /> <br /> <br />
+                    <TextField id="joinId" label="Meeting Code" onChange={onChange} /> <br />
+                    <br />
                     {/* <Link to={`/${id}/${name}`}> */}
 
                     <Button variant="outlined" onClick={handleClickJoin} disabled={(name && ($('#joinId').val())) ? false : true} color="secondary" startIcon={<VideoCallOutlinedIcon />}>
@@ -213,12 +217,12 @@ function App() {
                     </Button>
                     {/* </Link> */}
                   </form>
-                </CardContent>
-                {/* </CardActionArea> */}
-                <hr />
+                  {/* </CardContent> */}
+                  {/* </CardActionArea> */}
+                  <hr />
 
-                {/* <CardActionArea> */}
-                <CardContent>
+                  {/* <CardActionArea> */}
+                  {/* <CardContent> */}
                   <Typography gutterBottom variant="h5" component="h2" style={{ fontFamily: "raleway", color: "#ff796e" }} >
 
                     CREATE
@@ -234,7 +238,7 @@ function App() {
                   </Button>
                 </CardContent>
                 {/* </CardActionArea> */}
-                <br />
+                {/* <br /> */}
               </Card>
               {/* </Fade> */}
             </Grid>

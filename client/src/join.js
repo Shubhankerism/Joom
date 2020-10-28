@@ -319,27 +319,27 @@ function App() {
                 >
                     <Toolbar>
                         <Typography variant="h6" noWrap className={classes.title} id="welcome" style={{ fontFamily: "raleway", textAlign: "left" }}> Hi {name}!</Typography>
-                        <div>
-                            <IconButton
-                                color="inherit"
-                                aria-label="mute"
-                                edge="end"
-                                style={{ padding: 20, marginRight: 0 }}
-                                onClick={handleMute}
-                            >
-                                {!mute ? <MicOffTwoToneIcon fontSize="large" /> : <MicNoneTwoToneIcon fontSize="large" />}
-                            </IconButton>
 
-                            <IconButton
-                                color="inherit"
-                                aria-label="hide-vid"
-                                edge="end"
-                                style={{ padding: 20, marginLeft: 0 }}
-                                onClick={handleHide}
-                            >
-                                {hide ? <VideocamOffTwoToneIcon fontSize="large" /> : <VideocamTwoToneIcon fontSize="large" />}
-                            </IconButton>
-                        </div>
+                        <IconButton
+                            color="inherit"
+                            aria-label="mute"
+                            edge="end"
+                            style={{ padding: 10, marginRight: 0 }}
+                            onClick={handleMute}
+                        >
+                            {!mute ? <MicOffTwoToneIcon fontSize="large" /> : <MicNoneTwoToneIcon fontSize="large" />}
+                        </IconButton>
+
+                        <IconButton
+                            color="inherit"
+                            aria-label="hide-vid"
+                            edge="end"
+                            style={{ padding: 10, marginLeft: 0 }}
+                            onClick={handleHide}
+                        >
+                            {hide ? <VideocamOffTwoToneIcon fontSize="large" /> : <VideocamTwoToneIcon fontSize="large" />}
+                        </IconButton>
+
                         <Typography variant="h6" noWrap className={classes.title} style={{ fontFamily: "raleway", textAlign: "center" }}>
                             Room Id: <span style={{ backgroundColor: "#ffd9d4", color: "#ff796e" }}>{roomId}</span>
                         </Typography>
