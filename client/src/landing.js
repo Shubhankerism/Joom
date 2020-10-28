@@ -16,7 +16,7 @@ import TextField from '@material-ui/core/TextField';
 import LaunchOutlinedIcon from '@material-ui/icons/LaunchOutlined';
 import VideoCallOutlinedIcon from '@material-ui/icons/VideoCallOutlined';
 import Fade from '@material-ui/core/Fade';
-
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import BgImg from './bg.png';
 import './App.css';
 
@@ -42,7 +42,9 @@ const useStyles = makeStyles({
     borderColor: "#ff796e",
     boxShadow: "5px 5px 10px #ff796e",
     // background: 'linear-gradient(to bottom left, #ffffff 43%, #ce6479 100%)'
-    padding: 20
+    padding: 20,
+    marginTop: -20
+
   },
   bgImg: {
     backgroundImage: 'url(' + BgImg + ')',
@@ -230,7 +232,7 @@ function App() {
                   <span style={{ color: "gray" }} > NEW MEETING</span>
                   </Typography>
 
-
+                  <br />
 
                   <Button onClick={handleClick} variant="outlined" disabled={(name && !($('#joinId').val())) ? false : true} color="secondary" startIcon={<LaunchOutlinedIcon />}>
                     <span>
@@ -252,6 +254,7 @@ function App() {
           </Grid>
         </Grid>
       </Fade>
+      <div style={{ marginTop: 20, alignContent: "center", fontFamily: "raleway", fontSize: "medium" }}> Made with <FavoriteIcon style={{ color: "red" }} /> by Shubhanker Srivastava</div>
     </div >
   );
 
