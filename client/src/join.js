@@ -240,7 +240,7 @@ function App() {
         const myPeer = new Peer(undefined, {
             path: '/peerjs',
             host: '/',
-            port: '4000'
+            port: '443' //4000 on localhost 443 for heroku
         });
 
         let myVideoStream;
