@@ -134,9 +134,11 @@ function App() {
     const [socket, setSocket] = useState(null);
     const [count, setCount] = useState(0);
     // const [socketConnected, setSocketConnected] = useState(false);
-
+    const port = process.env.PORT || 4000;
     useEffect(() => {
-        setSocket(io('http://localhost:4000'));
+        setSocket(io(`http://localhost:${port}`));
+
+        // setSocket(io('http://localhost:4000'));
         setRoomId(id);
 
     }, []);

@@ -67,10 +67,10 @@ function App() {
   const [name, setName] = useState('');
   const history = useHistory()
   let params = useParams();
-
+  const port = process.env.PORT || 4000;
   // establish socket connection
   useEffect(() => {
-    setSocket(io('http://localhost:4000'));
+    setSocket(io(`http://localhost:${port}`));
 
     $('#joinId').val(params.id);
     setId(params.id);
